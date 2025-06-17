@@ -1,19 +1,20 @@
-import { Inter } from 'next/font/google';
-import { Providers } from './providers';
-import './globals.css';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: 'Next.js Auth Demo',
-  description: 'Next.js Authentication Demo with Auth0 and NextAuth.js',
+export const metadata: Metadata = {
+  title: "NextAuth Demo",
+  description: "NextAuth.js ile Auth0 entegrasyonu",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="tr">
       <body className={inter.className}>
